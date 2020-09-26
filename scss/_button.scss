@@ -1,0 +1,15 @@
+button {
+  min-height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border-color: transparent;
+  background-color: $primary-color;
+  color: #fff;
+  font-size: 30px;
+  border-width: 0;
+
+  &:hover {
+    transform: scale(0.9);
+    background-color: darken($color: $primary-color, $amount: 10%);
+  }
+}

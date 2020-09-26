@@ -1,0 +1,57 @@
+@import 'config';
+
+html {
+  background-color: $secondary-color;
+  background-image: -webkit-linear-gradient(
+    65deg,
+    $primary-color 50%,
+    $secondary-color 50%
+  );
+  min-height: 1000px;
+  font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+  color: #fff;
+  padding: 10px;
+}
+
+#heading {
+  background-color: $primary-color;
+  text-align: center;
+
+  h1 {
+    font-size: 1.75rem;
+  }
+}
+
+.item {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #f1f1f1;
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+input {
+  &:checked + p {
+    text-decoration: line-through;
+    text-decoration-color: $primary-color;
+  }
+
+  &[type='checkbox'] {
+    margin: 20px;
+  }
+}
+
+footer {
+  color: white;
+  color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+@import 'form';
+@import 'button';
