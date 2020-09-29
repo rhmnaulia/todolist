@@ -1,7 +1,7 @@
 //jshint esversion:6
-
 const express = require('express');
 const bodyParser = require('body-parser');
+const date = require(__dirname + '/date.js');
 const app = express();
 
 let items = ['Run', 'Read', 'Work'];
@@ -11,14 +11,7 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-  let today = new Date();
-
-  let options = {
-    weekday: 'long',
-    day: 'numeric',
-    month: 'long',
-  };
-  let day = today.toLocaleDateString('en-us', options);
+  let day = date();
   res.render('list', { listTitle: day, newListItem: items });
 });
 
